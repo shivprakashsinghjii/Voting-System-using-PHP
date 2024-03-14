@@ -1,0 +1,41 @@
+body {
+  /* text-align: center; */
+  background-color: #b8e994;
+}
+#headerSection {
+  padding: 5px;
+}
+
+#headerSection h1 {
+  font-family: Cursive;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#dropbox {
+  padding: 10px;
+  border-radius: 5px;
+  width: 15%;
+}
+
+button, #votebtn {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #085a6d;
+  color: white;
+}
+#Profile{
+  background-color: white;
+ width: 30%;
+ padding: 20px;
+ float: left;
+}
+#Group{
+  background-color: white;
+ width: 60%;
+ padding: 20px;
+ float: right;
+}

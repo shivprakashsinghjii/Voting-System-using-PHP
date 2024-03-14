@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <title>Registration</title>
+    <style>
+        #address {
+            width: 80%;
+            max-width: 300px; /* Limiting maximum width for better readability */
+        }
+
+        #imagepart {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80%;
+            max-width: 300px; /* Limiting maximum width for better readability */
+            margin: 0 auto; /* Centering the element */
+        }
+
+        #role {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80%;
+            max-width: 300px; /* Limiting maximum width for better readability */
+            margin: 0 auto; /* Centering the element */
+        }
+
+        #role select {
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%; /* Filling the parent container */
+            box-sizing: border-box; /* Including padding and border in width calculation */
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+    <div id="headerSection">
+        <h1>Online Voting System</h1>
+        <hr>
+    </div>
+    <div id="bodySection">
+        <h3>Registration</h3>
+        <form action="../api/register.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="mobile" placeholder="Enter mobile" required><br> <br>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="cpassword" placeholder="Confirm Password" required>
+            <br>
+            <br>
+            <input id="address" type="text" name="address" placeholder="Address" required>
+            <br>
+            <br>
+            
+                <div id="imagepart"> Upload image:
+                    <input type="file" name="photo" required>
+                </div>
+                <br>
+                <div id="role">
+                    Select your role: <select name="role" required>
+                        <option value="1">Voter</option>
+                        <option value="2">Group</option>
+                    </select>
+                </div>
+        
+            <br>
+            <button type="submit">Register</button>
+            <br>
+            <br> Already user? <a href="../index.html">Login here</a>
+        </form>
+    </div>
+</center>
+</body>
+
+</html>

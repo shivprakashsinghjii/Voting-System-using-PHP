@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Login</title>
+    <style>
+        input[type="number"],
+        input[type="password"] {
+            width: 80%;
+            max-width: 300px; /* Limiting maximum width for better readability */
+        }
+
+        #dropbox {
+            padding: 10px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 300px; /* Limiting maximum width for better readability */
+            box-sizing: border-box; /* Including padding and border in width calculation */
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div id="headerSection">
+        <h1>Online Voting System</h1>
+        <hr>
+    </div>
+    <div id="bodySection">
+        <form action="./api/login.php" method="post" >
+            <h3>Login</h3>
+            <input type="number" name="mobile" placeholder="Enter mobile" required><br><br>
+            <input type="password" name="password" placeholder="Enter password" required><br><br>
+            <select id="dropbox" name="role" required>
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select><br><br>
+            <button id="loginbtn" type="submit">Login</button><br><br>
+            New user? <a href="routes/register.html">Register here</a>
+        </form>
+    </div>
+</center>
+</body>
+</html>
